@@ -2,6 +2,8 @@ def check_valid(sides):
     for side in sides:
         if side <=0:
             return False
+    if (sides[0]>=(sides[1]+sides[2])) or (sides[1]>=(sides[0]+sides[2])) or (sides[2]>=(sides[0]+sides[1])):
+        return False
     return True
 
 def equilateral(sides):
